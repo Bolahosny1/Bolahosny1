@@ -1,12 +1,3 @@
-[<img src="assets/Animation2.gif" alt="👋 Hi there! I'm Bola Hosny| https://bola-hosny.lovable.app" title="👋 Hi there! I'm Bola Hosny | https://bola-hosny.lovable.app" />](https://bola-hosny.lovable.app)
-
-![visitors](https://vbr.nathanchung.dev/badge?page_id=mahmoudmetwall2y.mahmoudmetwall2y&color=00cf00)
-
-*𝙻𝚊𝚜𝚝 𝚖𝚊𝚗𝚞𝚊𝚕𝚕𝚢 𝚞𝚙𝚍𝚊𝚝𝚎𝚍:* `2025-08-31` <!-- TODO: automate this -->
-<!--
-**mahmoudmetwall2y/mahmoudmetwall2y** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
--->
-
 <h1 align="center">Hi 👋, I'm Bola Hosny Refeat</h1>
 <h3 align="center">Cloud Engineer ( AWS ) || CCNA || MCSA || Linux || Python || Docker || Git & Github || Kubernetes || Trainee@NTI || Student at Faculty of Computer Science.</h3>
 
