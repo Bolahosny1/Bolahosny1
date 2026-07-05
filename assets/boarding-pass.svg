@@ -1,0 +1,220 @@
+<svg width="1100" height="240" viewBox="0 0 1100 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Card background gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#12063a"/>
+    </linearGradient>
+
+    <!-- Boarding pass gradient (ticket body) -->
+    <linearGradient id="ticketBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1545"/>
+      <stop offset="65%" stop-color="#0d1545"/>
+      <stop offset="65%" stop-color="#090c2e"/>
+      <stop offset="100%" stop-color="#090c2e"/>
+    </linearGradient>
+
+    <!-- Neon accent gradient -->
+    <linearGradient id="neonLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ff2ea6"/>
+    </linearGradient>
+
+    <linearGradient id="neonVert" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Glows -->
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- QR cell clip -->
+    <clipPath id="qrClip"><rect x="720" y="35" width="130" height="130" rx="4"/></clipPath>
+  </defs>
+
+  <!-- Outer container with animated border -->
+  <rect x="2" y="2" width="1096" height="236" rx="14" fill="url(#cardBg)" stroke="url(#neonLine)" stroke-width="1.5">
+    <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Top accent line -->
+  <rect x="2" y="2" width="1096" height="4" rx="2" fill="url(#neonLine)" opacity="0.7"/>
+
+  <!-- Airline strip (left decorative) -->
+  <rect x="18" y="18" width="4" height="204" rx="2" fill="url(#neonVert)"/>
+
+  <!-- MAIN TICKET BODY background -->
+  <rect x="30" y="18" width="1054" height="204" rx="10" fill="url(#ticketBody)"/>
+
+  <!-- Perforated divide line (dashed) -->
+  <line x1="710" y1="30" x2="710" y2="210" stroke="#00f5ff" stroke-width="1" stroke-dasharray="4,5" opacity="0.35"/>
+  <!-- Notch circles on divider -->
+  <circle cx="710" cy="30" r="7" fill="#0a0e27"/>
+  <circle cx="710" cy="210" r="7" fill="#0a0e27"/>
+
+  <!-- ====== LEFT SECTION (main ticket) ====== -->
+
+  <!-- AIRLINE LOGO area -->
+  <text x="50" y="50" font-family="Consolas, monospace" font-size="11" fill="#00f5ff" opacity="0.7">✦ BOLA-AIR™ · TECH DIVISION</text>
+
+  <!-- Horizontal rule -->
+  <line x1="50" y1="58" x2="695" y2="58" stroke="url(#neonLine)" stroke-width="0.7" opacity="0.5"/>
+
+  <!-- FROM -->
+  <text x="50" y="82" font-family="Consolas, monospace" font-size="10" fill="#9ad9ff" opacity="0.6" letter-spacing="2">FROM</text>
+  <text x="50" y="102" font-family="Consolas, monospace" font-size="32" font-weight="bold" fill="#00f5ff" filter="url(#glow)" letter-spacing="3">JR.DEV</text>
+  <text x="50" y="118" font-family="Consolas, monospace" font-size="10" fill="#9ad9ff" opacity="0.5">Junior Developer</text>
+
+  <!-- Arrow -->
+  <text x="222" y="104" font-family="Consolas, monospace" font-size="28" fill="url(#neonLine)" filter="url(#softGlow)">──▶</text>
+
+  <!-- TO -->
+  <text x="340" y="82" font-family="Consolas, monospace" font-size="10" fill="#9ad9ff" opacity="0.6" letter-spacing="2">TO</text>
+  <text x="340" y="102" font-family="Consolas, monospace" font-size="32" font-weight="bold" fill="#a855f7" filter="url(#glow)" letter-spacing="3">YR.TEAM</text>
+  <text x="340" y="118" font-family="Consolas, monospace" font-size="10" fill="#9ad9ff" opacity="0.5">Your Engineering Team</text>
+
+  <!-- Separator -->
+  <line x1="50" y1="130" x2="695" y2="130" stroke="#1e2d6e" stroke-width="0.7"/>
+
+  <!-- Bottom fields row -->
+  <!-- GATE -->
+  <text x="50" y="150" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5">GATE</text>
+  <text x="50" y="165" font-family="Consolas, monospace" font-size="18" fill="#4dffb8" font-weight="bold">G7</text>
+  <text x="50" y="178" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.4">Graduate 2026</text>
+
+  <!-- SEAT -->
+  <text x="150" y="150" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5">SEAT</text>
+  <text x="150" y="165" font-family="Consolas, monospace" font-size="18" fill="#4dffb8" font-weight="bold">F01</text>
+  <text x="150" y="178" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.4">Full-Stack Capable</text>
+
+  <!-- CLASS -->
+  <text x="260" y="150" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5">CLASS</text>
+  <text x="260" y="165" font-family="Consolas, monospace" font-size="18" fill="#ff2ea6" font-weight="bold">PRO+</text>
+  <text x="260" y="178" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.4">Production Ready</text>
+
+  <!-- STATUS -->
+  <text x="380" y="150" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5">STATUS</text>
+  <rect x="380" y="154" width="70" height="18" rx="4" fill="#4dffb8" opacity="0.15" stroke="#4dffb8" stroke-width="0.8"/>
+  <text x="415" y="167" font-family="Consolas, monospace" font-size="11" fill="#4dffb8" text-anchor="middle" font-weight="bold">BOARDING</text>
+  <text x="380" y="180" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.4">Open to Opportunities</text>
+
+  <!-- FLIGHT NO -->
+  <text x="490" y="150" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5">FLIGHT</text>
+  <text x="490" y="165" font-family="Consolas, monospace" font-size="18" fill="#00f5ff" font-weight="bold">BH-2026</text>
+  <text x="490" y="178" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.4">Bola Hosny Refaat</text>
+
+  <!-- Barcode at bottom -->
+  <g opacity="0.6">
+    <rect x="50" y="192" width="3" height="14" fill="#00f5ff"/>
+    <rect x="55" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="58" y="192" width="4" height="14" fill="#00f5ff"/>
+    <rect x="64" y="192" width="2" height="14" fill="#00f5ff"/>
+    <rect x="68" y="192" width="3" height="14" fill="#00f5ff"/>
+    <rect x="73" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="76" y="192" width="2" height="14" fill="#00f5ff"/>
+    <rect x="80" y="192" width="4" height="14" fill="#00f5ff"/>
+    <rect x="86" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="89" y="192" width="3" height="14" fill="#00f5ff"/>
+    <rect x="94" y="192" width="2" height="14" fill="#00f5ff"/>
+    <rect x="98" y="192" width="4" height="14" fill="#00f5ff"/>
+    <rect x="104" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="107" y="192" width="2" height="14" fill="#00f5ff"/>
+    <rect x="111" y="192" width="3" height="14" fill="#00f5ff"/>
+    <rect x="116" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="119" y="192" width="4" height="14" fill="#00f5ff"/>
+    <rect x="125" y="192" width="2" height="14" fill="#00f5ff"/>
+    <rect x="129" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="132" y="192" width="3" height="14" fill="#00f5ff"/>
+    <rect x="137" y="192" width="4" height="14" fill="#00f5ff"/>
+    <rect x="143" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="146" y="192" width="2" height="14" fill="#00f5ff"/>
+    <rect x="150" y="192" width="3" height="14" fill="#00f5ff"/>
+    <rect x="155" y="192" width="1" height="14" fill="#00f5ff"/>
+    <rect x="158" y="192" width="4" height="14" fill="#00f5ff"/>
+    <rect x="164" y="192" width="2" height="14" fill="#00f5ff"/>
+    <rect x="168" y="192" width="3" height="14" fill="#00f5ff"/>
+    <text x="112" y="218" font-family="Consolas, monospace" font-size="7" fill="#9ad9ff" opacity="0.5" text-anchor="middle">BOLAHOSNY1-FL-2026-PRO</text>
+  </g>
+
+  <!-- ====== RIGHT SECTION (stub) ====== -->
+
+  <!-- QR code (stylized pixelated) -->
+  <g clip-path="url(#qrClip)">
+    <rect x="720" y="35" width="130" height="130" rx="4" fill="#060b24" stroke="#00f5ff" stroke-width="0.8" stroke-opacity="0.5"/>
+    <!-- QR pixels (handcrafted pattern) -->
+    <g fill="#00f5ff" opacity="0.85">
+      <!-- Top-left finder -->
+      <rect x="728" y="43" width="36" height="36" rx="2" fill="none" stroke="#00f5ff" stroke-width="2"/>
+      <rect x="734" y="49" width="24" height="24" rx="1" fill="none" stroke="#00f5ff" stroke-width="1.5"/>
+      <rect x="740" y="55" width="12" height="12" rx="1"/>
+      <!-- Top-right finder -->
+      <rect x="806" y="43" width="36" height="36" rx="2" fill="none" stroke="#00f5ff" stroke-width="2"/>
+      <rect x="812" y="49" width="24" height="24" rx="1" fill="none" stroke="#00f5ff" stroke-width="1.5"/>
+      <rect x="818" y="55" width="12" height="12" rx="1"/>
+      <!-- Bottom-left finder -->
+      <rect x="728" y="121" width="36" height="36" rx="2" fill="none" stroke="#00f5ff" stroke-width="2"/>
+      <rect x="734" y="127" width="24" height="24" rx="1" fill="none" stroke="#00f5ff" stroke-width="1.5"/>
+      <rect x="740" y="133" width="12" height="12" rx="1"/>
+      <!-- Data pixels (random-ish) -->
+      <rect x="776" y="43" width="6" height="6"/>
+      <rect x="786" y="43" width="6" height="6"/>
+      <rect x="796" y="43" width="6" height="6"/>
+      <rect x="776" y="53" width="6" height="6"/>
+      <rect x="796" y="53" width="6" height="6"/>
+      <rect x="786" y="63" width="6" height="6"/>
+      <rect x="776" y="73" width="6" height="6"/>
+      <rect x="786" y="73" width="6" height="6"/>
+      <rect x="796" y="73" width="6" height="6"/>
+      <rect x="776" y="83" width="6" height="6"/>
+      <rect x="786" y="83" width="6" height="6"/>
+      <rect x="776" y="93" width="6" height="6"/>
+      <rect x="796" y="93" width="6" height="6"/>
+      <rect x="786" y="103" width="6" height="6"/>
+      <rect x="776" y="113" width="6" height="6"/>
+      <rect x="796" y="113" width="6" height="6"/>
+      <rect x="776" y="121" width="6" height="6"/>
+      <rect x="786" y="131" width="6" height="6"/>
+      <rect x="776" y="141" width="6" height="6"/>
+      <rect x="796" y="141" width="6" height="6"/>
+      <rect x="786" y="151" width="6" height="6"/>
+      <rect x="808" y="93" width="6" height="6"/>
+      <rect x="818" y="93" width="6" height="6"/>
+      <rect x="828" y="103" width="6" height="6"/>
+      <rect x="808" y="113" width="6" height="6"/>
+      <rect x="828" y="113" width="6" height="6"/>
+      <rect x="818" y="121" width="6" height="6"/>
+      <rect x="808" y="131" width="6" height="6"/>
+      <rect x="828" y="131" width="6" height="6"/>
+      <rect x="818" y="141" width="6" height="6"/>
+      <rect x="808" y="151" width="6" height="6"/>
+      <rect x="828" y="151" width="6" height="6"/>
+    </g>
+  </g>
+  <text x="785" y="176" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" text-anchor="middle" opacity="0.5">linkedin.com/in/bola-hosny</text>
+
+  <!-- Right stub details -->
+  <text x="875" y="60" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5" text-anchor="middle">PASSENGER</text>
+  <text x="875" y="75" font-family="Consolas, monospace" font-size="13" fill="#e8fdff" text-anchor="middle" font-weight="bold">BOLA HOSNY</text>
+
+  <text x="875" y="100" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5" text-anchor="middle">EXPERIENCE</text>
+  <text x="875" y="115" font-family="Consolas, monospace" font-size="13" fill="#4dffb8" text-anchor="middle" font-weight="bold">3+ YRS</text>
+
+  <text x="875" y="140" font-family="Consolas, monospace" font-size="8" fill="#9ad9ff" opacity="0.6" letter-spacing="1.5" text-anchor="middle">STACK</text>
+  <text x="875" y="153" font-family="Consolas, monospace" font-size="10" fill="#00f5ff" text-anchor="middle">Flutter · AWS</text>
+  <text x="875" y="167" font-family="Consolas, monospace" font-size="10" fill="#00f5ff" text-anchor="middle">Docker · K8s</text>
+
+  <!-- Pulsing dot on status -->
+  <circle cx="875" cy="192" r="5" fill="#4dffb8">
+    <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="888" y="196" font-family="Consolas, monospace" font-size="9" fill="#4dffb8">HIRING</text>
+</svg>
